@@ -27,5 +27,59 @@ body{
     margin: 10px;
     background-color: orange;
     font-weight: bold;
+    color: black;
+    font-size: 30px;
+
     
+}
+
+.relative{
+    position: relative;
+    left: 30px;
+    border: 7px solid grey;
+}
+
+.fixed{
+    background-color: yellow;
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 70px;
+    border: 5px dashed black;
+}
+
+.absolute-parent{
+    background-color:lightcoral;
+    height: 30px;
+    width: 40vw;
+    position: relative:
+    left: 40px;
+    border: 7pc solid orange;
+
+}
+
+.absolute-child{
+    background-color: whitesmoke;
+    width: 15vw;
+    position: absolute;
+    left: 10px
+}
+@keyframes spin {
+ to {
+ transform: rotate(0deg);
+  }
+    
+  50% {
+    transform: rotate(180deg)
+  }
+  
+  100%{
+    transform: rotate(0deg)
+  }
+  }
+  
+.animated{
+  height: 200px;
+  animation: spin 3s linear infinite;
+  transition: width 2s, height 2s, transform 2s;
 }
