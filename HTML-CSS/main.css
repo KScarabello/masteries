@@ -1,0 +1,31 @@
+body{
+    background-color: lightgoldenrodyellow;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxfXaZcOu45sYwnxsH1KkHw1opODoBExvo6sj5oimh7Ph-VPFD')
+}
+
+
+.intro-text{
+    color: pink;
+    background-color: green;
+    font-size: 30px;
+}
+
+.span-demo{
+    color:red;
+     font-weight: bold; 
+}
+
+.span-demo span{
+    color: blue;
+}
+
+.box-model {
+    width: 50vw;
+    height: 100px;
+    padding: 20px;
+    border: 20px dashed black;
+    margin: 10px;
+    background-color: orange;
+    font-weight: bold;
+    
+}

@@ -9,17 +9,13 @@ export default class ClassComp extends Component{
 
         this.state = {
 
-            
+            input: ''
 
         }
 
-        this.handleClick = this.handleClick.bind(this);
-
     }
 
-    handleClick = () => {
-        alert('An on-click handler just prompted this alert to appear. Points for me!')
-    }
+   
 
 render(){
 
@@ -35,7 +31,7 @@ render(){
 
            <Link to='routea'> <h1>Click here to experience the joys of routing</h1></Link>
 
-           <button onClick={this.handleClick()}>Click me </button>
+           <input placeholder="type something" onChange={(e) =>this.setState(e.target.value)}>Click me </input>
            
 
 

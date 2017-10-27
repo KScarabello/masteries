@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import ClassComp from './components/ClassComp';
 import FuncComp from './components/FuncComp';
 import RouteA from './components/RouteA';
+import AxiosDemo from './components/AxiosDemo';
 
 
 
@@ -19,7 +20,11 @@ export default (
                 <RouteA />
             </div>
         ) } />
-        
+        <Route path='/axiosdemo' component={AxiosDemo} render={() => (
+            <div>
+                <AxiosDemo />
+            </div>
+        ) } />
 
        </Switch>
 )
