@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import ClassComp from './components/ClassComp';
 import logo from './logo.svg';
+import router from './router';
 import './App.css';
 
 class App extends Component {
@@ -8,6 +10,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>I am starting the mastery challenge!</h1>
+        </header>
+        {router}
       </div>
     );
   }
