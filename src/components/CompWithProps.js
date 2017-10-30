@@ -1,13 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class CompWithProps extends Component{
-    constructor(props){
-        super(props)
-
-
-    }
-
-    render(){
+export default function CompWithProps() {
+    
         return(
             <div> {this.props.props}</div>
 
@@ -20,4 +14,3 @@ export default class CompWithProps extends Component{
     }
 
    
-}
