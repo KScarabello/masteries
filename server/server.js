@@ -3,22 +3,20 @@ const cors = require('cors');
 const massive = require('massive');
 const bodyParser = require('body-parser');
 const config = require('../config');
+const dc = require('./dogController.js')
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // massive connection string to database
 
 massive(config.dblink).then(db => {
     app.set('db', db)
-    app.get('db').seed_file().then(res => {
-        console.log(res)
+})
 
-}).catch(err => {
-    console.log(err)
-})
-})
+app.post('/api/createdog', dc.createDog);
 
 
 const port = 3001;

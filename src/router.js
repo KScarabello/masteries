@@ -4,6 +4,7 @@ import ClassComp from './components/ClassComp';
 import FuncComp from './components/FuncComp';
 import RouteA from './components/RouteA';
 import AxiosDemo from './components/AxiosDemo';
+import Dog from './components/Dog';
 
 
 
@@ -23,6 +24,11 @@ export default (
         <Route path='/axiosdemo' component={AxiosDemo} render={() => (
             <div>
                 <AxiosDemo />
+            </div>
+        ) } />
+        <Route path='/dog/:id' component={Dog} render={() => (
+            <div>
+                <Dog />
             </div>
         ) } />
 

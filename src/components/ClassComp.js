@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import {sayHello} from '../ducks/reducer';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import CompWithProps from './CompWithProps';
+import CreateDog from './CreateDog';
 
  class ClassComp extends Component{
     constructor(props){
@@ -44,6 +46,10 @@ render(){
 
             <Link to='axiosdemo'>Click here to experience componentDidMount, axios, promises,
             and read about John Wayne movies at the same time.</Link>
+
+            <CompWithProps props="hi there" />
+
+            <CreateDog />
 
         </div>
     )
