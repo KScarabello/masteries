@@ -15,12 +15,9 @@ body{
      font-weight: bold; 
 }
 
-.span-demo span{
-    color: blue;
-}
 
-#id {
-    color: navy;
+span, #span {
+    color: cornflowerblue;
 }
 
 .box-model {
@@ -33,6 +30,7 @@ body{
     font-weight: bold;
     color: black;
     font-size: 30px;
+    box-sizing: content-box;
 
     
 }
@@ -56,7 +54,7 @@ body{
     background-color:lightcoral;
     height: 30px;
     width: 40vw;
-    position: relative:
+    position: relative;
     left: 40px;
     border: 7pc solid orange;
 
@@ -86,4 +84,71 @@ body{
   height: 200px;
   animation: spin 3s linear infinite;
   transition: width 2s, height 2s, transform 2s;
+}
+
+.div > p{
+    font-family: 'helvetica';
+    font-size: 20px;
+    color: darkslategray
+}
+
+ul + h3 {
+    font-family: 'arial';
+    font-size: 25px;
+    color: yellowgreen;
+}
+
+
+
+.react{
+    float: left;
+    transition: width 2s;
+}
+
+.react:hover{
+    width: 200px;
+}
+
+.angular{
+    float: right;
+    
+}
+
+.display-demo{
+    display: inline;
+}
+
+input:focus{
+    background-color: orange;
+}
+
+input:disabled{
+    background-color: red;
+}
+
+li:nth-child(1){
+    background-color: pink;
+}
+
+.fancy-box{
+    font-size: 50px;
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(to right, red, yellow);
+    box-shadow: 10px 5px 5px black;
+    margin: 20px;
+    text-overflow: word-wrap;
+}
+
+.flexbox-parent{
+    display: flex;
+    width: 100vw;
+    height: 400px;
+}
+
+.flexbox{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

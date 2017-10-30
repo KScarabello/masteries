@@ -1,21 +1,24 @@
 const express = require('express');
 const cors = require('cors');
-const massive = require('express');
+const massive = require('massive');
+const bodyParser = require('body-parser');
+const config = require('../config');
 
 const app = express();
 
 app.use(bodyParser.json());
 
-//massive connection string to database
+// massive connection string to database
 
-// massive(connectionString).then(db => {
-//     app.set('db', db)
-//     app.get('db').init.seed_file().then(res => {
-//         console.log(res)
-//     })
-// }).catch(err => {
-//     console.log(err)
-// })
+massive(config.dblink).then(db => {
+    app.set('db', db)
+    app.get('db').seed_file().then(res => {
+        console.log(res)
+
+}).catch(err => {
+    console.log(err)
+})
+})
 
 
 const port = 3001;
