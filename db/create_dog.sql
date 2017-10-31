@@ -1,4 +1,4 @@
 INSERT INTO dogBreed (name, activity_level, description)
 VALUES
-('English Bulldog', 'super lazy', 'English bulldogs are super lazy but adorable')
+($1, $2, $3)
 returning *;

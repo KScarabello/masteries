@@ -17,6 +17,7 @@ massive(config.dblink).then(db => {
 })
 
 app.post('/api/createdog', dc.createDog);
+app.get('/api/getDog', dc.getDog);
 
 
 const port = 3001;

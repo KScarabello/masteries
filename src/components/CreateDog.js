@@ -9,7 +9,7 @@ export default class CreateDog extends Component{
         this.state = {
 
             name: '',
-            activityLevel: '',
+            activity_level: '',
             description: ''
         }
 
@@ -20,15 +20,15 @@ newDog() {
 
     var doggy = {
         name: this.state.name,
-        activityLevel: this.state.activityLevel,
-        description: this.state.descriptione
+        activity_level: this.state.activity_level,
+        description: this.state.description
     }
 
 
 
-     axios.post('https://localhost:3001/api/createdog', doggy)
+     axios.post('http://localhost:3002/api/createdog', doggy)
             .then(response => {
-                return response.data[0]
+                console.log("sent successfully")
             })
 
     }
