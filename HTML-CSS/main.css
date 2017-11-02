@@ -152,3 +152,52 @@ li:nth-child(1){
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+/* box should appear pink for standard desktop media type */
+.responsive-box{
+    height: 100px;
+    width: 100vw;
+    background-color: pink;
+    color: black;
+}
+
+
+/* //box should appear yellow for Ipad Media Type */
+@media (max-width: 1100px){
+
+.responsive-box{
+    background-color: yellow;
+}
+}
+
+
+@media (max-width: 650px){
+
+.responsive-box{
+    background-color:purple;
+}
+}
+
+@media (max-width: 500px){
+
+.responsive-box{
+    background-color:green;
+}
+}
+
+
+/* Box should appear orange for Iphone (mobile )media type */
+
+@media (max-width: 400px){
+
+.responsive-box{
+    background-color: orange;
+}
+}
+
+@media (max-width: 300px){
+
+.responsive-box{
+    background-color: red;
+}
+}

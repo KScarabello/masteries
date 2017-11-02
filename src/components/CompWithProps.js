@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function CompWithProps(props) {
-    const words = props.words
+export default function CompWithProps (props)  {
+    
         return(
-            <div> {props.words}</div>
+            <div> 
+                {props.string}
+            </div>
 
 
         )

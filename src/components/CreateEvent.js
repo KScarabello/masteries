@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
-export default class CreateDog extends Component{
+export default class CreateEvent extends Component{
     constructor(props){
         super(props)
 
         this.state = {
 
             name: '',
-            activity_level: '',
+            activityLevel: '',
             description: ''
         }
 
@@ -20,15 +20,15 @@ newDog() {
 
     var doggy = {
         name: this.state.name,
-        activity_level: this.state.activity_level,
-        description: this.state.description
+        activityLevel: this.state.activityLevel,
+        description: this.state.descriptione
     }
 
 
 
-     axios.post('http://localhost:3002/api/createdog', doggy)
+     axios.post('https://localhost:3001/api/createdog', doggy)
             .then(response => {
-                console.log("sent successfully")
+                return response.data[0]
             })
 
     }

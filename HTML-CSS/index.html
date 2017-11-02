@@ -50,6 +50,15 @@
     
     <script>
        console.log("I am Javascript being rendered in HTML.")
+
+        var hello = () =>  ["hi", "I am", "being destructured"];
+
+        var [a, b, c] = hello();
+        console.log(a, b, c)
+
+
+    
+
     </script>
     
     <div class="fancy-box">I'm a fancy box with gradients and box-shadows and text-wrap</div>
@@ -74,6 +83,11 @@
         <p>There p tags...</p>
         <p> are being styled...</p>
         <p>with a carrat selector</p>
+    </div>
+
+    <div class="responsive-box">
+        I am responsive!!!
+
     </div>
 
 

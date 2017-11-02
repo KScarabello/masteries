@@ -4,9 +4,7 @@ import ClassComp from './components/ClassComp';
 import FuncComp from './components/FuncComp';
 import RouteA from './components/RouteA';
 import AxiosDemo from './components/AxiosDemo';
-import Dog from './components/Dog';
-
-
+import Event from './components/Event';
 
 export default (
 
@@ -26,10 +24,11 @@ export default (
                 <AxiosDemo />
             </div>
         ) } />
-        <Route path='/dog/:id' component={Dog} render={() => (
+       <Route path="/event/:id/:name" component={Event} />
             <div>
-                <Dog />
+                <Event />
             </div>
+        
         ) } />
 
        </Switch>

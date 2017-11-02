@@ -5,17 +5,18 @@ import {sayHello} from '../ducks/reducer';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import CompWithProps from './CompWithProps';
-import CreateDog from './CreateDog';
+import axios from 'axios';
+
 
  class ClassComp extends Component{
     constructor(props){
         super(props)
 
-        // this.state = {
+        this.state = {
 
-        //     greeting: ''
+            event: []
 
-        // }
+        }
 
 
         this.handleClick = this.handleClick.bind(this);
@@ -23,6 +24,15 @@ import CreateDog from './CreateDog';
 
 handleClick = () => {
     this.props.sayHello("I just went through the reducer. Redux champ right here!")
+}
+
+componentDidMount = () => {
+ axios.get('http://localhost:3001/api/events/')
+        .then(response => {
+            console.log(response.data)
+            this.setState({event: response.data[0]})    
+            }) 
+
 }
 
 render(){
@@ -47,9 +57,14 @@ render(){
             <Link to='axiosdemo'>Click here to experience componentDidMount, axios, promises,
             and read about John Wayne movies at the same time.</Link>
 
-            <CompWithProps props="hi there" />
+            <CompWithProps string="hi there" />
 
-            <CreateDog />
+
+           <h2>Info below is being pulled from a PostGres database</h2>
+            <h4>{this.state.event.title}</h4>
+            
+
+            
 
         </div>
     )

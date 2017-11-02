@@ -3,7 +3,7 @@ const cors = require('cors');
 const massive = require('massive');
 const bodyParser = require('body-parser');
 const config = require('../config');
-const dc = require('./dogController.js')
+const ec = require('./eventController.js')
 
 const app = express();
 
@@ -16,8 +16,8 @@ massive(config.dblink).then(db => {
     app.set('db', db)
 })
 
-app.post('/api/createdog', dc.createDog);
-app.get('/api/getDog', dc.getDog);
+
+app.get('/api/events', ec.getEvents);
 
 
 const port = 3001;
